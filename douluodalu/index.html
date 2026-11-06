@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>斗罗大陆漫画瓜子-斗罗大陆漫画瓜子免费阅读_全集在线观看</title>
+<meta name="description" content="斗罗大陆漫画瓜子在线阅读入口，汇总斗罗大陆漫画瓜子各章节更新与剧情看点，提供稳定的免费阅读路径与作品信息速览。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f3b'/%3E%3Cpath d='M18 20h20a8 8 0 0 1 0 16H18z' fill='%23ffcf5c'/%3E%3Cpath d='M18 38h22a8 8 0 0 1 0 16H18z' fill='%23ff8a5c'/%3E%3Ccircle cx='46' cy='20' r='6' fill='%2378e0c8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b1f3b;
+  --ink-soft:#3c4266;
+  --paper:#fdfaf3;
+  --paper-2:#f5efe2;
+  --gold:#e8a83a;
+  --gold-deep:#c9861f;
+  --jade:#2f9d86;
+  --coral:#e2683f;
+  --line:#e3dccb;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(27,31,59,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+  line-height:1.75;
+  font-size:16px;
+}
+img,svg{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+.serif{font-family:"Songti SC","STSong","Noto Serif CJK SC",serif;}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,250,243,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:24px;
+  padding:12px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-mark{width:40px;height:40px;flex:none;}
+.logo-text{
+  font-weight:800;font-size:18px;letter-spacing:.5px;
+  color:var(--ink);white-space:nowrap;
+}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;}
+.main-nav a{
+  padding:6px 12px;border-radius:999px;
+  font-size:14.5px;color:var(--ink-soft);
+  transition:background .2s,color .2s;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--paper-2);color:var(--ink);}
+.nav-cta{
+  background:var(--ink)!important;color:#fff!important;
+  padding:7px 16px!important;font-weight:600;
+}
+.nav-cta:hover{background:var(--gold-deep)!important;}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1b1f3b 0%,#2b3261 55%,#1f4b52 100%);
+  color:#fdfaf3;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 82% 18%,rgba(232,168,58,.28),transparent 45%),
+             radial-gradient(circle at 12% 85%,rgba(47,157,134,.3),transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;
+  padding:56px 0 60px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(26px,3.4vw,40px);
+  line-height:1.3;margin:0 0 16px;font-weight:800;
+  letter-spacing:.5px;
+}
+.hero .eyebrow{
+  display:inline-block;font-size:13px;letter-spacing:2px;
+  color:var(--gold);border:1px solid rgba(232,168,58,.5);
+  border-radius:999px;padding:3px 14px;margin-bottom:20px;
+}
+.hero p{color:#d8d6e6;margin:0 0 26px;font-size:15.5px;max-width:34em;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 24px;border-radius:999px;font-weight:700;font-size:15px;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn-primary{background:var(--gold);color:#241a06;box-shadow:0 8px 20px rgba(232,168,58,.32);}
+.btn-primary:hover{transform:translateY(-2px);background:#f2b74f;}
+.btn-ghost{border:1px solid rgba(253,250,243,.42);color:#fdfaf3;}
+.btn-ghost:hover{background:rgba(253,250,243,.12);}
+.hero-art{position:relative;z-index:2;}
+.hero-card{
+  background:rgba(253,250,243,.07);
+  border:1px solid rgba(253,250,243,.18);
+  border-radius:20px;padding:20px;backdrop-filter:blur(4px);
+}
+.hero-card h2{font-size:15px;margin:0 0 14px;color:var(--gold);letter-spacing:1px;}
+.hero-list{list-style:none;margin:0;padding:0;font-size:14.5px;}
+.hero-list li{
+  display:flex;justify-content:space-between;gap:12px;
+  padding:9px 0;border-bottom:1px dashed rgba(253,250,243,.16);
+  color:#e6e3f0;
+}
+.hero-list li:last-child{border-bottom:none;}
+.hero-list .tag{color:var(--jade);font-weight:600;font-size:13px;white-space:nowrap;}
+
+/* ---------- sections ---------- */
+section{padding:64px 0;}
+.section-head{margin-bottom:34px;max-width:44em;}
+.section-kicker{
+  font-size:13px;letter-spacing:2.5px;color:var(--gold-deep);
+  font-weight:700;margin:0 0 10px;
+}
+.section-head h2{
+  font-size:clamp(21px,2.4vw,28px);margin:0 0 12px;font-weight:800;line-height:1.4;
+}
+.section-head p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+
+/* reading entry */
+.entry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.entry-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:10px;
+}
+.entry-card .icon{width:38px;height:38px;}
+.entry-card h3{margin:0;font-size:17px;font-weight:800;}
+.entry-card p{margin:0;font-size:14.5px;color:var(--ink-soft);flex:1;}
+.entry-card .go{
+  font-size:14px;font-weight:700;color:var(--gold-deep);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.entry-card .go:hover{color:var(--coral);}
+
+/* chapter list */
+.chapter-toolbar{
+  display:flex;gap:12px;flex-wrap:wrap;align-items:center;
+  margin-bottom:22px;
+}
+.search-box{
+  flex:1;min-width:220px;display:flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:8px 16px;
+}
+.search-box input{
+  border:none;outline:none;flex:1;font-size:15px;background:transparent;
+  color:var(--ink);font-family:inherit;
+}
+.search-box svg{width:18px;height:18px;flex:none;color:var(--ink-soft);}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:7px 16px;font-size:14px;color:var(--ink-soft);cursor:pointer;
+  font-family:inherit;transition:.2s;
+}
+.chip:hover{border-color:var(--gold);color:var(--ink);}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600;}
+.chapter-list{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.chapter-item{
+  display:flex;align-items:center;gap:14px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;transition:border-color .2s,transform .2s;
+}
+.chapter-item:hover{border-color:var(--gold);transform:translateY(-2px);}
+.chapter-num{
+  font-weight:800;font-size:14px;color:var(--gold-deep);
+  min-width:64px;font-variant-numeric:tabular-nums;
+}
+.chapter-title{font-size:15px;font-weight:600;flex:1;}
+.chapter-meta{font-size:12.5px;color:#8a8fa8;white-space:nowrap;}
+.empty-hint{
+  display:none;padding:24px;text-align:center;color:#8a8fa8;
+  font-size:14.5px;border:1px dashed var(--line);border-radius:12px;
+}
+.empty-hint.show{display:block;}
+
+/* world / notes */
+.notes{
+  background:var(--paper-2);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.notes-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:start;}
+.notes-text p{margin:0 0 16px;font-size:15.5px;color:var(--ink-soft);}
+.notes-text p:last-child{margin-bottom:0;}
+.notes-text strong{color:var(--ink);}
+.fact-panel{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);
+}
+.fact-panel h3{margin:0 0 16px;font-size:16px;font-weight:800;}
+.fact-list{list-style:none;margin:0;padding:0;font-size:14.5px;}
+.fact-list li{
+  display:flex;justify-content:space-between;gap:14px;
+  padding:10px 0;border-bottom:1px dashed var(--line);color:var(--ink-soft);
+}
+.fact-list li:last-child{border-bottom:none;}
+.fact-list b{color:var(--ink);font-weight:700;text-align:right;}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;
+}
+.faq-item h3{margin:0 0 8px;font-size:16px;font-weight:800;}
+.faq-item p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+/* download */
+.download-band{
+  background:linear-gradient(120deg,#1b1f3b,#2b3261);
+  color:#fdfaf3;border-radius:22px;
+  padding:40px 36px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;
+}
+.download-band .db-text{flex:1;min-width:240px;}
+.download-band h2{margin:0 0 10px;font-size:22px;font-weight:800;}
+.download-band p{margin:0;color:#cfcce0;font-size:15px;}
+.btn-download{
+  background:var(--gold);color:#241a06;
+  padding:12px 30px;border-radius:999px;font-weight:800;font-size:15px;
+  pointer-events:none;opacity:.9;
+}
+
+/* footer */
+.site-footer{
+  background:#14172c;color:#b9bdd6;
+  padding:42px 0 30px;font-size:14px;
+}
+.footer-top{
+  display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer-brand{display:flex;align-items:center;gap:12px;max-width:24em;}
+.footer-brand .logo-text{color:#fdfaf3;font-size:17px;}
+.footer-brand p{margin:6px 0 0;font-size:13px;color:#8f95b3;}
+.footer-links{display:flex;gap:40px;flex-wrap:wrap;}
+.footer-links h4{margin:0 0 10px;font-size:13px;letter-spacing:1.5px;color:var(--gold);}
+.footer-links ul{list-style:none;margin:0;padding:0;font-size:13.5px;}
+.footer-links li{margin-bottom:7px;}
+.footer-links a:hover{color:#fdfaf3;}
+.footer-bottom{
+  padding-top:20px;font-size:12.5px;color:#7c82a1;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding:40px 0 44px;gap:28px;}
+  .entry-grid{grid-template-columns:1fr;}
+  .chapter-list{grid-template-columns:1fr;}
+  .notes-grid{grid-template-columns:1fr;}
+  .faq{grid-template-columns:1fr;}
+  section{padding:48px 0;}
+  .main-nav{margin-left:0;width:100%;}
+  .header-inner{gap:12px;}
+}
+@media (max-width:520px){
+  body{font-size:15px;}
+  .hero h1{font-size:24px;}
+  .hero p{font-size:14.5px;}
+  .chapter-item{padding:12px 14px;gap:10px;}
+  .chapter-meta{display:none;}
+  .download-band{padding:28px 22px;}
+  .main-nav a{padding:6px 10px;font-size:14px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="斗罗大陆漫画瓜子 首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1b1f3b"/>
+        <path d="M17 19h19a8 8 0 0 1 0 16H17z" fill="#e8a83a"/>
+        <path d="M17 37h21a8 8 0 0 1 0 16H17z" fill="#e2683f"/>
+        <circle cx="46" cy="19" r="6" fill="#2f9d86"/>
+        <path d="M46 50l4 6h-8z" fill="#fdfaf3"/>
+      </svg>
+      <span class="logo-text">斗罗大陆漫画瓜子</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#reading">阅读入口</a>
+      <a href="#chapters">章节列表</a>
+      <a href="#world">作品速览</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#chapters">开始阅读</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">玄幻热血 · 漫画连载</span>
+        <h1>斗罗大陆漫画瓜子</h1>
+        <p>斗罗大陆漫画瓜子是一个围绕《斗罗大陆》漫画阅读的入口页。这里把章节、剧情看点与阅读方式集中呈现，方便你按顺序追更，也方便回头补看早期桥段，减少在多个页面之间来回跳转的麻烦。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#chapters">进入章节列表</a>
+          <a class="btn btn-ghost" href="#reading">了解阅读方式</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-card">
+          <h2>页面速览</h2>
+          <ul class="hero-list">
+            <li><span>作品类型</span><span class="tag">玄幻 / 热血</span></li>
+            <li><span>阅读形态</span><span class="tag">漫画分章</span></li>
+            <li><span>主线核心</span><span class="tag">魂师成长</span></li>
+            <li><span>推荐读法</span><span class="tag">按卷顺序</span></li>
+            <li><span>更新查看</span><span class="tag">章节列表</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- READING ENTRY -->
+  <section id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-kicker">阅读入口</p>
+        <h2>三种常见读法，先选一种开始</h2>
+        <p>不同读者进入斗罗大陆漫画瓜子的目的不一样：有人从最新一章往前追，有人要补完前面的铺垫，也有人只想先弄清人物关系。下面三种路径分别对应这些需求。</p>
+      </div>
+      <div class="entry-grid">
+        <article class="entry-card">
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="4" y="6" width="32" height="26" rx="4" fill="#f5efe2" stroke="#e8a83a" stroke-width="2"/>
+            <path d="M12 14h16M12 20h16M12 26h9" stroke="#c9861f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3>顺序追更</h3>
+          <p>从第一章依次往后读，主线成长脉络最完整。适合第一次接触作品、想看清魂环与魂技设定如何逐步展开的读者。</p>
+          <a class="go" href="#chapters">从开头读 →</a>
+        </article>
+        <article class="entry-card">
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="15" fill="#f5efe2" stroke="#2f9d86" stroke-width="2"/>
+            <path d="M20 12v9l6 4" stroke="#2f9d86" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <h3>补看关键桥段</h3>
+          <p>跳过日常过渡，直接找对决与突破段落。斗罗大陆漫画瓜子的章节标题便于定位，适合时间有限、想重温名场面的读者。</p>
+          <a class="go" href="#chapters">按标题查找 →</a>
+        </article>
+        <article class="entry-card">
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 5l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z" fill="#f5efe2" stroke="#e2683f" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <h3>先认人物再看</h3>
+          <p>如果对唐三、小舞等角色只有模糊印象，不妨先读作品速览，弄清武魂与魂师体系，再进入正文会顺畅许多。</p>
+          <a class="go" href="#world">看作品速览 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section id="chapters" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-kicker">章节列表</p>
+        <h2>按名称或序号定位你想看的部分</h2>
+        <p>下方列出斗罗大陆漫画瓜子的部分章节示例，输入关键词即可筛选。列表仅作阅读导航，具体内容以实际连载页面为准。</p>
+      </div>
+
+      <div class="chapter-toolbar">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21" stroke-linecap="round"/>
+          </svg>
+          <input type="search" id="chapterSearch" placeholder="输入章节名或序号，例如：双生武魂" aria-label="搜索章节">
+        </label>
+        <div class="filter-chips" role="group" aria-label="章节筛选">
+          <button class="chip active" data-filter="all" type="button">全部</button>
+          <button class="chip" data-filter="start" type="button">开篇</button>
+          <button class="chip" data-filter="battle" type="button">对决</button>
+          <button class="chip" data-filter="growth" type="button">成长</button>
+        </div>
+      </div>
+
+      <ul class="chapter-list" id="chapterList">
+        <li class="chapter-item" data-cat="start" data-key="第1话 圣魂村的少年">
+          <span class="chapter-num">第1话</span>
+          <span class="chapter-title">圣魂村的少年</span>
+          <span class="chapter-meta">开篇</span>
+        </li>
+        <li class="chapter-item" data-cat="start" data-key="第2话 双生武魂觉醒">
+          <span class="chapter-num">第2话</span>
+          <span class="chapter-title">双生武魂觉醒</span>
+          <span class="chapter-meta">开篇</span>
+        </li>
+        <li class="chapter-item" data-cat="growth" data-key="第3话 诺丁学院的入学">
+          <span class="chapter-num">第3话</span>
+          <span class="chapter-title">诺丁学院的入学</span>
+          <span class="chapter-meta">成长</span>
+        </li>
+        <li class="chapter-item" data-cat="growth" data-key="第4话 第一魂环的猎取">
+          <span class="chapter-num">第4话</span>
+          <span class="chapter-title">第一魂环的猎取</span>
+          <span class="chapter-meta">成长</span>
+        </li>
+        <li class="chapter-item" data-cat="battle" data-key="第5话 与小舞的初次交手">
+          <span class="chapter-num">第5话</span>
+          <span class="chapter-title">与小舞的初次交手</span>
+          <span class="chapter-meta">对决</span>
+        </li>
+        <li class="chapter-item" data-cat="battle" data-key="第6话 七舍的规矩">
+          <span class="chapter-num">第6话</span>
+          <span class="chapter-title">七舍的规矩</span>
+          <span class="chapter-meta">对决</span>
+        </li>
+        <li class="chapter-item" data-cat="growth" data-key="第7话 大师的指点">
+          <span class="chapter-num">第7话</span>
+          <span class="chapter-title">大师的指点</span>
+          <span class="chapter-meta">成长</span>
+        </li>
+        <li class="chapter-item" data-cat="battle" data-key="第8话 史莱克新生的试炼">
+          <span class="chapter-num">第8话</span>
+          <span class="chapter-title">史莱克新生的试炼</span>
+          <span class="chapter-meta">对决</span>
+        </li>
+      </ul>
+      <div class="empty-hint" id="emptyHint">没有找到匹配的章节，换个关键词试试，或点击“全部”查看完整列表。</div>
+    </div>
+  </section>
+
+  <!-- WORLD -->
+  <div class="notes" id="world">
+    <div class="wrap" style="padding:64px 0;">
+      <div class="section-head">
+        <p class="section-kicker">作品速览</p>
+        <h2>读懂设定，再读斗罗大陆漫画瓜子更顺</h2>
+        <p>《斗罗大陆》的看点不只在打斗，更在于一套自洽的魂师体系。了解下面几项基础设定，能帮助你在阅读时快速抓住情节推进的关键。</p>
+      </div>
+      <div class="notes-grid">
+        <div class="notes-text">
+          <p><strong>魂师与魂环。</strong>作品中的修炼者被称为魂师，通过猎杀魂兽获得魂环来提升实力。魂环的年限与颜色往往直接对应角色所处的阶段，这也是判断剧情进展的重要线索。</p>
+          <p><strong>双生武魂的特殊性。</strong>主角唐三拥有两个武魂，这种设定在故事前期就埋下伏笔，并持续影响后续的战斗方式与成长节奏。阅读时留意武魂切换的时机，会更容易理解战术安排。</p>
+          <p><strong>团队与学院线索。</strong>史莱克学院的伙伴关系是故事的重要支点。斗罗大陆漫画瓜子把相关章节集中列出，方便读者按团队组建、磨合、并肩作战的顺序回看。</p>
+          <p>需要说明的是，漫画改编在细节与节奏上与原著小说存在差异，具体呈现以漫画连载内容为准。本页只做阅读导航与设定梳理，不替代作品本身。</p>
+        </div>
+        <aside class="fact-panel">
+          <h3>基础信息</h3>
+          <ul class="fact-list">
+            <li><span>题材</span><b>玄幻 · 热血</b></li>
+            <li><span>核心设定</span><b>武魂 / 魂环 / 魂师</b></li>
+            <li><span>主角</span><b>唐三</b></li>
+            <li><span>重要伙伴</span><b>小舞</b></li>
+            <li><span>关键场所</span><b>诺丁学院 · 史莱克学院</b></li>
+            <li><span>阅读方式</span><b>漫画分章连载</b></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-kicker">常见问题</p>
+        <h2>读之前想确认的几件事</h2>
+        <p>这些问题在访问者中反复出现，集中回答可以减少查找成本。答案只针对本页所提供的信息范围。</p>
+      </div>
+      <div class="faq">
+        <article class="faq-item">
+          <h3>斗罗大陆漫画瓜子是什么？</h3>
+          <p>它是围绕《斗罗大陆》漫画阅读整理的一个入口页面，把章节导航、设定速览和阅读路径放在同一处，帮助读者更快找到想看的部分。</p>
+        </article>
+        <article class="faq-item">
+          <h3>没有读过原著能直接看吗？</h3>
+          <p>可以。漫画本身会交代必要的设定，先读“作品速览”了解武魂与魂环，再进入章节，理解门槛会更低。</p>
+        </article>
+        <article class="faq-item">
+          <h3>章节列表是完整目录吗？</h3>
+          <p>不是。页面展示的是部分章节示例，用于说明筛选与定位方式，实际可读章节以连载页面的更新情况为准。</p>
+        </article>
+        <article class="faq-item">
+          <h3>怎样快速找到某一话？</h3>
+          <p>在章节列表上方的搜索框输入章节名或序号，也可以按“开篇 / 对决 / 成长”分类筛选，列表会即时更新。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="download-band">
+        <div class="db-text">
+          <h2>离线阅读包</h2>
+          <p>把斗罗大陆漫画瓜子的章节导航与设定速览保存到本地，方便在没有网络时翻看目录与要点。文件地址将在准备完成后放出。</p>
+        </div>
+        <a class="btn-download" href="#" download data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2b3261"/>
+          <path d="M17 19h19a8 8 0 0 1 0 16H17z" fill="#e8a83a"/>
+          <path d="M17 37h21a8 8 0 0 1 0 16H17z" fill="#e2683f"/>
+          <circle cx="46" cy="19" r="6" fill="#2f9d86"/>
+        </svg>
+        <div>
+          <span class="logo-text">斗罗大陆漫画瓜子</span>
+          <p>《斗罗大陆》漫画阅读导航与设定速览，帮助读者按需定位章节。</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>站内导航</h4>
+          <ul>
+            <li><a href="#reading">阅读入口</a></li>
+            <li><a href="#chapters">章节列表</a></li>
+            <li><a href="#world">作品速览</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>阅读提示</h4>
+          <ul>
+            <li><a href="#chapters">按序号追更</a></li>
+            <li><a href="#chapters">按分类筛选</a></li>
+            <li><a href="#world">先看设定</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>斗罗大陆漫画瓜子 · 阅读导航页</span>
+      <span>页面信息以连载实际内容为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('chapterSearch');
+  var list = document.getElementById('chapterList');
+  var empty = document.getElementById('emptyHint');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var items = Array.prototype.slice.call(list.querySelectorAll('.chapter-item'));
+  var currentCat = 'all';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(li){
+      var key = (li.getAttribute('data-key') || '').toLowerCase();
+      var cat = li.getAttribute('data-cat');
+      var okCat = currentCat === 'all' || cat === currentCat;
+      var okText = !q || key.indexOf(q) !== -1;
+      var ok = okCat && okText;
+      li.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.classList.toggle('show', shown === 0);
+  }
+
+  input.addEventListener('input', apply);
+  chips.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      chips.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentCat = btn.getAttribute('data-filter');
+      apply();
+    });
+  });
+})();
+</script>
+</body>
+      </html>
