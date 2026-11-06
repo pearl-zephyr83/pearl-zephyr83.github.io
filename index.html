@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蓝莓视频-蓝莓视频在线观看_高清影视资源与播放体验</title>
+<meta name="description" content="蓝莓视频是一个提供高清影视内容在线播放的平台。本页介绍蓝莓视频的播放体验、内容分类与使用方式，帮助访客快速了解并进入观看。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232b1a4d'/%3E%3Ccircle cx='26' cy='28' r='9' fill='%23a98bff'/%3E%3Ccircle cx='40' cy='34' r='7' fill='%237b5bff'/%3E%3Cpath d='M32 14c2 6 6 8 6 8s-4 2-6 8c-2-6-6-8-6-8s4-2 6-8z' fill='%23d9c9ff'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0f0b1a;
+    --bg-soft:#171029;
+    --card:#1d1533;
+    --line:rgba(169,139,255,.18);
+    --text:#ece8f7;
+    --muted:#a79fc0;
+    --berry:#a98bff;
+    --berry-deep:#7b5bff;
+    --accent:#ffd166;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,11,26,.86);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:700;letter-spacing:.5px;}
+  .brand .logo-mark{width:34px;height:34px;flex:0 0 auto;}
+  .brand span{background:linear-gradient(90deg,#e6dcff,#a98bff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;color:var(--muted);}
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--berry);}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    background:linear-gradient(135deg,var(--berry-deep),var(--berry));
+    color:#fff;font-size:14px;font-weight:600;
+    padding:9px 18px;border-radius:999px;
+    box-shadow:0 6px 20px rgba(123,91,255,.35);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 26px rgba(123,91,255,.5);}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:64px 0 56px;}
+  .hero::before{
+    content:"";position:absolute;inset:-20% -10% auto -10%;height:520px;
+    background:radial-gradient(ellipse at 20% 10%,rgba(123,91,255,.30),transparent 60%),
+               radial-gradient(ellipse at 80% 0%,rgba(255,209,102,.12),transparent 55%);
+    pointer-events:none;
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;color:var(--berry);letter-spacing:1.5px;
+    border:1px solid var(--line);border-radius:999px;padding:5px 14px;margin-bottom:20px;
+    background:rgba(169,139,255,.07);
+  }
+  h1{font-size:clamp(30px,4.4vw,50px);line-height:1.2;font-weight:800;letter-spacing:1px;}
+  h1 em{font-style:normal;background:linear-gradient(90deg,#c9b8ff,#7b5bff);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p.lead{margin-top:20px;color:var(--muted);font-size:16px;max-width:34em;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:9px;
+    background:linear-gradient(135deg,var(--berry-deep),var(--berry));
+    color:#fff;font-weight:600;font-size:15px;
+    padding:13px 26px;border-radius:12px;
+    box-shadow:0 8px 26px rgba(123,91,255,.38);
+    transition:transform .2s;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:9px;
+    border:1px solid var(--line);color:var(--text);
+    font-size:15px;padding:13px 24px;border-radius:12px;
+    background:rgba(255,255,255,.02);
+    transition:border-color .2s,background .2s;
+  }
+  .btn-ghost:hover{border-color:var(--berry);background:rgba(169,139,255,.08);}
+  .hero-stats{display:flex;gap:32px;margin-top:38px;flex-wrap:wrap;}
+  .hero-stats div strong{display:block;font-size:22px;color:#fff;}
+  .hero-stats div small{color:var(--muted);font-size:13px;}
+
+  .hero-art{position:relative;display:flex;justify-content:center;}
+  .hero-art .glow{
+    position:absolute;width:300px;height:300px;border-radius:50%;
+    background:radial-gradient(circle,rgba(123,91,255,.45),transparent 70%);
+    filter:blur(10px);
+  }
+  .hero-art svg{position:relative;width:100%;max-width:360px;}
+
+  /* section base */
+  section{padding:56px 0;}
+  .sec-head{margin-bottom:32px;max-width:46em;}
+  .sec-head .kicker{font-size:13px;letter-spacing:2px;color:var(--berry);font-weight:600;}
+  .sec-head h2{font-size:clamp(22px,2.6vw,30px);font-weight:700;margin-top:8px;}
+  .sec-head p{color:var(--muted);margin-top:12px;font-size:15px;}
+
+  /* categories */
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .cat{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 18px;transition:transform .22s,border-color .22s;
+  }
+  .cat:hover{transform:translateY(-4px);border-color:rgba(169,139,255,.5);}
+  .cat .ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(169,139,255,.13);margin-bottom:14px;}
+  .cat h3{font-size:16px;font-weight:600;}
+  .cat p{font-size:13.5px;color:var(--muted);margin-top:6px;}
+
+  /* feature list */
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .feature{
+    background:linear-gradient(160deg,rgba(169,139,255,.10),rgba(29,21,51,.6));
+    border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;
+  }
+  .feature h3{font-size:17px;margin-bottom:10px;}
+  .feature p{font-size:14px;color:var(--muted);}
+
+  /* watch list */
+  .watch-list{display:grid;gap:14px;}
+  .watch-item{
+    display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;
+    transition:border-color .2s,background .2s;
+  }
+  .watch-item:hover{border-color:rgba(169,139,255,.5);background:#231a3d;}
+  .watch-num{font-size:13px;color:var(--berry);font-weight:700;width:26px;}
+  .watch-item h3{font-size:15.5px;font-weight:600;}
+  .watch-item p{font-size:13.5px;color:var(--muted);margin-top:3px;}
+  .watch-tag{font-size:12px;color:var(--accent);border:1px solid rgba(255,209,102,.3);border-radius:999px;padding:3px 11px;white-space:nowrap;}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .about-grid p{color:var(--muted);font-size:15px;margin-bottom:16px;}
+  .about-grid p strong{color:var(--text);}
+  .about-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;}
+  .about-panel h3{font-size:16px;margin-bottom:14px;}
+  .about-panel ul{list-style:none;display:grid;gap:12px;}
+  .about-panel li{display:flex;gap:10px;font-size:14px;color:var(--muted);}
+  .about-panel li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--berry);margin-top:8px;flex:0 0 auto;}
+
+  /* download */
+  .download{
+    background:linear-gradient(135deg,rgba(123,91,255,.22),rgba(255,209,102,.08));
+    border:1px solid var(--line);border-radius:22px;padding:40px;
+    display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  }
+  .download h2{font-size:24px;}
+  .download p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:30em;}
+  .btn-download{
+    display:inline-flex;align-items:center;gap:9px;
+    background:linear-gradient(135deg,var(--berry-deep),var(--berry));
+    color:#fff;font-weight:600;font-size:15px;padding:13px 30px;border-radius:12px;
+    pointer-events:none;opacity:.9;
+  }
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:36px 0 44px;margin-top:24px;}
+  .foot-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:26px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;}
+  .foot-brand svg{width:28px;height:28px;}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--muted);}
+  .foot-links a:hover{color:var(--berry);}
+  .foot-bottom{font-size:13px;color:#6f678a;border-top:1px solid var(--line);padding-top:20px;}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-art{order:-1;max-width:280px;margin:0 auto;}
+    .cats{grid-template-columns:repeat(2,1fr);}
+    .features{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:26px;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:560px){
+    .hero{padding:40px 0 36px;}
+    .cats{grid-template-columns:1fr;}
+    .watch-item{grid-template-columns:auto 1fr;gap:12px;}
+    .watch-tag{grid-column:2;justify-self:start;}
+    .download{padding:28px 22px;}
+    .nav-cta{padding:8px 14px;font-size:13px;}
+    .brand{font-size:17px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="蓝莓视频首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#241a3f"/>
+        <circle cx="26" cy="30" r="9" fill="#a98bff"/>
+        <circle cx="40" cy="36" r="7" fill="#7b5bff"/>
+        <path d="M32 12c2.4 6.4 6.6 8.6 6.6 8.6S34.4 23 32 29.4c-2.4-6.4-6.6-8.8-6.6-8.8S29.6 18.4 32 12z" fill="#e6dcff"/>
+      </svg>
+      <span>蓝莓视频</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#categories">内容分类</a>
+      <a href="#features">播放体验</a>
+      <a href="#watch">热门观看</a>
+      <a href="#about">关于平台</a>
+    </nav>
+    <a class="nav-cta" href="#watch">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      开始观看
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">高清影视 · 在线播放</span>
+        <h1><em>蓝莓视频</em></h1>
+        <p class="lead">蓝莓视频是一个聚焦高清影视内容在线播放的平台。无论你想追剧、看片还是随手打开一部作品放松，都可以在这里找到清晰的分类入口与顺畅的播放体验。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#watch">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            进入观看
+          </a>
+          <a class="btn-ghost" href="#categories">浏览内容分类</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>高清</strong><small>画质优先</small></div>
+          <div><strong>多端</strong><small>适配浏览</small></div>
+          <div><strong>分类</strong><small>快速查找</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="glow"></div>
+        <svg viewBox="0 0 360 300">
+          <defs>
+            <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2a1f4d"/>
+              <stop offset="1" stop-color="#15102a"/>
+            </linearGradient>
+            <linearGradient id="play" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a98bff"/>
+              <stop offset="1" stop-color="#7b5bff"/>
+            </linearGradient>
+          </defs>
+          <rect x="30" y="40" width="300" height="180" rx="18" fill="url(#screen)" stroke="rgba(169,139,255,.35)"/>
+          <circle cx="180" cy="130" r="40" fill="url(#play)" opacity=".9"/>
+          <path d="M170 112v36l30-18z" fill="#fff"/>
+          <rect x="52" y="196" width="120" height="8" rx="4" fill="rgba(169,139,255,.35)"/>
+          <rect x="52" y="196" width="70" height="8" rx="4" fill="#a98bff"/>
+          <circle cx="122" cy="200" r="7" fill="#e6dcff"/>
+          <circle cx="90" cy="262" r="14" fill="#3a2a66"/>
+          <circle cx="90" cy="262" r="7" fill="#7b5bff"/>
+          <circle cx="150" cy="262" r="14" fill="#3a2a66"/>
+          <circle cx="210" cy="262" r="14" fill="#3a2a66"/>
+          <circle cx="270" cy="262" r="14" fill="#3a2a66"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容分类 -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">CONTENT</span>
+        <h2>蓝莓视频的内容分类</h2>
+        <p>平台按内容类型与观看场景组织入口，访客可以依据自己的偏好快速缩小范围，不必在首页反复翻找。</p>
+      </div>
+      <div class="cats">
+        <article class="cat">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a98bff" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></div>
+          <h3>电影专区</h3>
+          <p>按类型与年份聚合影片，适合完整观看一部长片。</p>
+        </article>
+        <article class="cat">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a98bff" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>剧集连播</h3>
+          <p>多集内容连续呈现，便于按顺序追看整部作品。</p>
+        </article>
+        <article class="cat">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a98bff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>短片速看</h3>
+          <p>时长较短的片段与短片，适合碎片时间浏览。</p>
+        </article>
+        <article class="cat">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a98bff" stroke-width="2"><path d="M12 3l2.6 5.6L21 9.4l-4.5 4.3L17.6 21 12 17.7 6.4 21l1.1-7.3L3 9.4l6.4-.8z"/></svg></div>
+          <h3>精选推荐</h3>
+          <p>由编辑侧整理的观看清单，帮助快速决定看什么。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 播放体验 -->
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">EXPERIENCE</span>
+        <h2>蓝莓视频的播放体验</h2>
+        <p>观看体验由清晰度、加载与界面三者共同决定。蓝莓视频围绕这几个环节做取舍，让打开即看成为默认路径。</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <h3>画质优先</h3>
+          <p>播放页以高清为默认目标，在网络条件允许时优先呈现更清晰的画面，减少模糊与压缩感。</p>
+        </article>
+        <article class="feature">
+          <h3>入口直接</h3>
+          <p>分类与播放入口集中在首屏与导航区域，减少层级跳转，让访客用更少的点击进入内容。</p>
+        </article>
+        <article class="feature">
+          <h3>小屏友好</h3>
+          <p>页面布局适配手机浏览，导航与播放控制在小屏下保持可点按的尺寸，阅读与观看都不费力。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门观看 -->
+  <section id="watch">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">WATCHLIST</span>
+        <h2>蓝莓视频的观看清单</h2>
+        <p>下面是一份按观看场景整理的清单示例，说明不同内容类型在蓝莓视频中分别适合怎样的观看节奏。</p>
+      </div>
+      <div class="watch-list">
+        <div class="watch-item">
+          <span class="watch-num">01</span>
+          <div>
+            <h3>整部长片 · 周末时段</h3>
+            <p>适合留出完整时间观看，画质与音画同步是主要关注点。</p>
+          </div>
+          <span class="watch-tag">长内容</span>
+        </div>
+        <div class="watch-item">
+          <span class="watch-num">02</span>
+          <div>
+            <h3>连续剧集 · 通勤间隙</h3>
+            <p>按集数顺序推进，适合分段观看，随时可接着上次的位置继续。</p>
+          </div>
+          <span class="watch-tag">连播</span>
+        </div>
+        <div class="watch-item">
+          <span class="watch-num">03</span>
+          <div>
+            <h3>短片片段 · 碎片时间</h3>
+            <p>时长较短，打开即可看完，适合在等待或休息时快速浏览。</p>
+          </div>
+          <span class="watch-tag">短内容</span>
+        </div>
+        <div class="watch-item">
+          <span class="watch-num">04</span>
+          <div>
+            <h3>精选合集 · 无明确目标</h3>
+            <p>当不确定看什么时，从编辑清单进入，由推荐内容带动选择。</p>
+          </div>
+          <span class="watch-tag">推荐</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">ABOUT</span>
+        <h2>关于蓝莓视频</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p><strong>蓝莓视频</strong>的定位是一个轻量的在线观看入口，而不是内容社区。页面结构围绕“找到内容、开始播放”这两件事展开，尽量把干扰元素放在次要位置。</p>
+          <p>对于第一次访问的访客，建议从内容分类入手，先确认自己想看的类型，再进入对应的播放区域。蓝莓视频的分类命名以常见的内容形态为依据，不依赖专业术语。</p>
+          <p>如果你更关心观看过程本身，可以优先了解播放体验部分；如果只是想随便看看，精选推荐与观看清单会给出更直接的路径。蓝莓视频希望不同目的的访客都能在较短时间内得到结果。</p>
+        </div>
+        <aside class="about-panel">
+          <h3>使用蓝莓视频的三个步骤</h3>
+          <ul>
+            <li>在首屏或导航中选择内容分类，确定观看方向。</li>
+            <li>进入播放区域，按需调整清晰度与播放进度。</li>
+            <li>通过观看清单或精选推荐，继续发现下一部内容。</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section>
+    <div class="wrap">
+      <div class="download">
+        <div>
+          <h2>把蓝莓视频的观看入口带到手边</h2>
+          <p>下载入口已预留，后续将提供正式安装包。当前版本请直接通过浏览器访问蓝莓视频，在页面内完成浏览与播放。</p>
+        </div>
+        <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#241a3f"/>
+          <circle cx="26" cy="30" r="9" fill="#a98bff"/>
+          <circle cx="40" cy="36" r="7" fill="#7b5bff"/>
+          <path d="M32 12c2.4 6.4 6.6 8.6 6.6 8.6S34.4 23 32 29.4c-2.4-6.4-6.6-8.8-6.6-8.8S29.6 18.4 32 12z" fill="#e6dcff"/>
+        </svg>
+        <span>蓝莓视频</span>
+      </div>
+      <nav class="foot-links" aria-label="页尾导航">
+        <a href="#categories">内容分类</a>
+        <a href="#features">播放体验</a>
+        <a href="#watch">观看清单</a>
+        <a href="#about">关于平台</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      蓝莓视频 · 高清影视在线播放入口。页面内容用于介绍平台的使用方式与内容组织，具体可观看内容以实际页面为准。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
